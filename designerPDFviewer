@@ -1,0 +1,18 @@
+int designerPdfViewer(vector<int> h, string word) {
+    int ar[word.size()];
+    for(int i=0;i<word.size();i++){
+        ar[i]=word[i];
+    }
+  
+    for(int i=0;i<word.size();i++){
+        int t=ar[i]-97;
+        ar[i]=h[t];
+    }
+   
+    int max=0;
+    for(int i=0;i<word.size();i++){
+        if(ar[i]>=max)
+        max=ar[i];
+    }
+    return max*word.size();
+}
