@@ -1,0 +1,9 @@
+int hurdleRace(int k, vector<int> height) {
+    int min=0,t;
+    for(int i=0;i<height.size();i++){
+       t=k-height[i];
+       if(t<min)
+       min=t;
+    }
+    return -min;
+}
