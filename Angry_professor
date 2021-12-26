@@ -1,0 +1,17 @@
+string angryProfessor(int k, vector<int> a) {
+    int late=0,on_time=0;
+    for(int i=0;i<a.size();i++){
+        if(a[i]<=0)
+        on_time++;
+        else {
+        late++;
+        }
+    }
+    string res;
+    if(k<=on_time)
+    res="NO";
+    else
+    res="YES";
+    
+    return res;
+}
